@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "id":1,
+      "date":"2022-04-11",
+      "time":"13:54",
+      "itemName":["Apples","Bananas","Lemons"],
+      "purchasingPartner":"Restaurant C",
+      "total":125000,
+      "status":"Order Completed"
+    },
+    {
+      "id":2,
+      "date":"2022-08-18",
+      "time":"11:20",
+      "itemName":["Chopped Veges","Frozen Fruit Mix"],
+      "purchasingPartner":"Fruitty",
+      "total":219200,
+      "status":"Order Completed"
+    },
+    {
+      "id":3,
+      "date":"2022-07-16",
+      "time":"09:20",
+      "itemName":["Chocolates","Fruit Mix","ice cubes"],
+      "purchasingPartner":"Restaurant A",
+      "total":219786,
+      "status":"Order Completed"
+    },
+    {
+      "id":4,
+      "date":"2022-07-16",
+      "time":"09:25",
+      "itemName":["Chocolates"],
+      "purchasingPartner":"Restaurant A",
+      "total":675754,
+      "status":"Order Completed"
+    }
+  ]
+}

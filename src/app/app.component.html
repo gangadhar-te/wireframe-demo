@@ -1,0 +1,72 @@
+<h1 class="heading">Shipping Management</h1>
+<div class="container">
+  <div class="topContainer">
+    <div class="query sink">
+      <h4>Query Settings</h4>
+    </div>
+    <div class="middle sink">
+      <div class="dates">
+        <div>
+          <input type="date" [(ngModel)]="fromDate" class="input-fields" />
+        </div>
+        <div class="dash">-</div>
+        <div>
+          <input type="date" [(ngModel)]="toDate" class="input-fields" />
+        </div>
+        <div>
+          <input
+            type="text"
+            class="input-fields search-field"
+            placeholder="Search by Purchasing Partner's name"
+            [(ngModel)]="searchText"
+          />
+        </div>
+      </div>
+
+      <div class="time">
+        <div class="btn-field" *ngFor="let date of dates">
+          <button class="buttons">{{ date }}</button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button class="search sink" (click)="searchFields()">Search</button>
+    </div>
+  </div>
+
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Item Name</th>
+      <th>Purchasing Partner</th>
+      <th>Total</th>
+      <th class="noBorder"></th>
+    </tr>
+    <tr *ngFor="let item of tempItems">
+      <td>
+        <div class="line">
+          {{ item.date | date: "yyyy/MM/dd" }} | {{ item.time }}
+        </div>
+      </td>
+      <td>
+        <div class="line">
+          {{ item.itemName }}
+        </div>
+      </td>
+      <td>
+        <div class="line">
+          {{ item.purchasingPartner }}
+        </div>
+      </td>
+      <td>
+        {{ item.total }}
+        <i class="fa-solid fa-chevron-right"></i>
+      </td>
+      <td class="noBorder">
+        <div class="statusBox">
+          {{ item.status }}
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
